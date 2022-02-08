@@ -55,49 +55,49 @@
 																	    if (nota >= 65 && nota <= 69 ){
 																		cout <<" Obtuvo una C+ " <<endl;
 																		}else {
-																				if (nota >= 70 && nota <= 74 ){
+																			if (nota >= 70 && nota <= 74 ){
 																				cout <<" Obtuvo una B- " <<endl;
+																			} else {
+																			if (nota >75 && nota <= 79){
+																			cout << " Obtuvo una B " <<endl;
+																			} else {
+																				if (nota >80 && nota <= 84){
+																				cout << " Obtuvo una B+ " <<endl;
 																				} else {
-																					if (nota >75 && nota <= 79){
-																						cout << " Obtuvo una B " <<endl;
+																				if (nota >85 && nota <= 89){
+																				cout << " Obtuvo una A- " <<endl;
+																				 } else {
+																					if (nota >90 && nota <= 94){
+																					cout << " Obtuvo una A " <<endl;
 																					} else {
-																						if (nota >80 && nota <= 84){
-																						cout << " Obtuvo una B+ " <<endl;
-																					} else {
-																							if (nota >85 && nota <= 89){
-																						    cout << " Obtuvo una A- " <<endl;
-																					      } else {
-																					      	   	if (nota >90 && nota <= 94){
-																						        cout << " Obtuvo una A " <<endl;
-																					            } else {
-																					            		if (nota >95 && nota <= 99){
-																						                 cout << " Obtuvo una A+ " <<endl;
-																					                   }else {
-																					                   		if (nota = 100){
-																						                     cout << " Obtuvo una A++ " <<endl;
-																					                         } else {
-																					                         	cout << "Ingrese un valor de 0 a 100" <<endl;
-																											 }
-																									   }
-																								}
-																						  }
-																					}
-																					}
-																				}
-																		}
-							                                       }           
-					                                            } 
-				                                            }
-		                                                }
-	                                                }
-                                            	}
-	                                        }
-	                                 	}	
-									}
-							   }
-						   }
+																					    if (nota >95 && nota <= 99){
+																						cout << " Obtuvo una A+ " <<endl;
+																					    }else {
+																					        if (nota = 100){
+																						    cout << " Obtuvo una A++ " <<endl;
+																					         } else {
+																					            cout << "Ingrese un valor de 0 a 100" <<endl;
+																								 }
+																							}
+																						}
+																				    }
+																			    }
+																		   }
+																	    }
+																	}
+							                                    }           
+					                                        } 
+				                                        }
+		                                            }
+	                                            }
+                                            }
+	                                    }
+	                                }	
+								}
+							}
 						}
 					}
+				}
 	
 	
 	system("pause");
