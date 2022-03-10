@@ -29,6 +29,7 @@ total = subtotal + ( subtotal* 0.15);
 
     cout << endl;
     cout <<"Subtotal: " << subtotal << endl;
+    cout <<"Impuesto a pagar: " << imp << "%" << endl;
     cout <<"Total: " << total << endl;
     cout << endl;
     cout << endl;
