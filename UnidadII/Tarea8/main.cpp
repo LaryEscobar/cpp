@@ -16,7 +16,7 @@ cin >> numero ;
 
 numero = sqrt(numero) ;
 
-cout << " La raiz cuadrada en: " << numero << endl;
+cout << " La raiz cuadrada es: " << numero << endl;
 
     return 0;
 }
