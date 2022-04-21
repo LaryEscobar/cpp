@@ -30,7 +30,7 @@ void  menu (){
         cin >> opcion;
 
         ofstream ingreso ;
-        ifstream leer;
+        ifstream Leer;
 
         switch (opcion)
         {
@@ -39,7 +39,7 @@ void  menu (){
            ingresarreclusos ();
             break;
         case 2: 
-           void verRecluso(ifstream & Leer );
+           verRecluso(Leer);
             break;
         case 3: 
            buscarRecluso();
