@@ -12,7 +12,7 @@ void verRecluso(ifstream & Leer ){//parametro y recibimiento por referencia
     string codigo, edad, ced;
     string  nombre, ape, tiempo ;
 
-    ifstream Leer ;
+    ifstream leer;
 
 
     Leer.open ("Ingreso_Recluso.txt", ios :: in);
