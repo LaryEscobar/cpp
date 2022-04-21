@@ -39,7 +39,7 @@ void  menu (){
            ingresarreclusos ();
             break;
         case 2: 
-           verRecluso();
+           void verRecluso(ifstream & Leer );
             break;
         case 3: 
            buscarRecluso();
