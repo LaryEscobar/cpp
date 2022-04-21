@@ -1,1 +1,1 @@
-void verRecluso();
+void verRecluso(ifstream & Leer);
