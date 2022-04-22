@@ -6,13 +6,14 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    bool rsp = login() ;
+    login rp ;
 
-    if (rsp == true)
+    Menu menu ; 
+   
+    if (rp.logIn() == true)
     {
        system ("cls");
-      menu();
-
+        menu.menu();
 
     }
     return 0;

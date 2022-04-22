@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <cctype>
 
+
 using namespace std;
 
 bool verifica (string Cod ){
@@ -40,7 +41,7 @@ bool verifica (string Cod ){
 void ingresarreclusos (){
 
     string codigo, edad, ced;
-    string  nombre, ape, tiempo ;
+    string  nombre, ape, tiempo, a ;
     char op ;
 
     ofstream agg;
@@ -52,6 +53,8 @@ void ingresarreclusos (){
     {
         system ("cls");
 
+        
+
         cout << " \t \t Ingreso de Reclusos " << endl;
         cout << " -----------------------------" << endl ;
 
@@ -59,25 +62,30 @@ void ingresarreclusos (){
         cin.ignore();
         cin >> codigo;
         
-        cout << " Primer Nombre y Primer Apellido del Recluso : " << endl ;
+        cout << " Ingrese Primer Nombre del Recluso : " << endl ;
         cin.ignore();
-        cin >> nombre >> ape;
+        cin >> nombre;
 
-        cout << " Ingrese N° de cedula " << endl;
+        cout << " Ingrese  Primer Apellido del Recluso : " << endl ;
+        cin.ignore();
+        cin >> ape;
+        
+
+        cout << " Ingrese Numero de cedula " << endl;
         cin.ignore();
         cin>>ced;
 		
-        cout << " Edad : " << endl ;
+        cout << " Ingrese Edad : " << endl ;
         cin.ignore();
         cin >> edad;
   
-        cout << " Tiempo de Sentencia : " << endl ;
+        cout << " Ingrese Tiempo de Sentencia en numeros: " << endl ;
         cin.ignore();
         cin >> tiempo;
 
          if (verifica (codigo))
 
-        agg << codigo << " " << nombre << " " << ape << " " << ced <<" " << edad << " " << tiempo <<"\n " ;
+        agg << codigo << " " << nombre << " " << ape << " " << ced <<" " << edad << " " << tiempo  <<"\n " ;
 
 
         cout << " Desea seguir ingresando reclusos? s/n " << endl;

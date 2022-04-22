@@ -2,21 +2,24 @@
 #include <fstream>
 #include <windows.h>
 #include <cctype>
+#include "visualizar.h"
+
 
 using namespace std;
 
-void verRecluso(ifstream & Leer ){//parametro y recibimiento por referencia 
+void  visualizar:: verRecluso(){//parametro y recibimiento por referencia 
+    
     
     system ("cls");
 
     string codigo, edad, ced;
-    string  nombre, ape, tiempo ;
+    string  nombre, ape, tiempo;
 
-    ifstream leer;
+    ifstream Leer ;
 
-
-    Leer.open ("Ingreso_Recluso.txt", ios :: in);
+    Leer.open ("Ingreso_Recluso. txt", ios :: in);
     if (Leer.is_open()){
+
 
         cout << "---------- Reclusos Registrados-------------" << endl << endl;
 
@@ -30,12 +33,13 @@ void verRecluso(ifstream & Leer ){//parametro y recibimiento por referencia
             Leer >> edad;
             Leer >> tiempo;
 
-            cout <<" Codigo --------- : " << codigo << endl;
-            cout <<" Nombre y Apellido  --------- : " << nombre << ape << endl;
-            cout <<" N° de cedula  --------- : " << ced << endl;
-            cout <<" Edad --------- : " << edad << endl;
-            cout <<" Tiempo de sentencia --------- : " << tiempo << endl;
-            cout <<" --------------------------- : " << endl;
+            cout <<" Codigo --------------------- : " << codigo << endl;
+            cout <<" Primer Nombre -------------- : " << nombre << endl;
+            cout <<" Primer Apellido  ----------- : " << ape << endl;
+            cout <<" Numero de cedula  -----------: " << ced << endl;
+            cout <<" Edad ---------.............. : " << edad << endl;
+            cout <<" Tiempo de sentencia ---------: " << tiempo << endl;
+            cout <<" --------------------------------------------------------- : " << endl;
 
 
             Leer >> codigo;  

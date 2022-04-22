@@ -2,6 +2,7 @@
 #include <fstream>
 #include <windows.h>
 #include <cctype>
+#include "buscar.h"
 
 using namespace std;
 
@@ -9,14 +10,17 @@ using namespace std;
 
 
 
-void buscarRecluso(ifstream & leer){ //parametro y recibimiento por referencia 
+void buscar :: buscarRecluso(){ //parametro y recibimiento por referencia 
     system ("cls");
 
-    leer.open ("Ingreso_Recluso.txt", ios :: in);
+    ifstream leer;
+
+    leer.open ("Ingreso_Recluso. txt", ios :: in);
 
     string codigo, edad, ced;
-    string  nombre, ape, tiempo ;
+    string  nombre, ape, tiempo;
     string cod2 ;
+
 
     bool encontrado = false ;
     cout << " Ingrese el codigo del recluso " << endl;
@@ -31,14 +35,17 @@ void buscarRecluso(ifstream & leer){ //parametro y recibimiento por referencia
             leer >> ced;
             leer >> edad;
             leer >> tiempo;
+        
         if (codigo == cod2)
         {
-            cout <<" Codigo --------- : " << codigo << endl;
-            cout <<" Nombre y Apellido  --------- : " << nombre << ape << endl;
-            cout <<" N° de cedula  --------- : " << ced << endl;
-            cout <<" Edad --------- : " << edad << endl;
-            cout <<" Tiempo de sentencia --------- : " << tiempo << endl;
-            cout <<" --------------------------- : " << endl;
+            
+            cout <<" Codigo --------------------- : " << codigo << endl;
+            cout <<" Primer Nombre -------------- : " << nombre << endl;
+            cout <<" Primer Apellido  ----------- : " << ape << endl;
+            cout <<" Numero de cedula  -----------: " << ced << endl;
+            cout <<" Edad ---------.............. : " << edad << endl;
+            cout <<" Tiempo de sentencia ---------: " << tiempo << endl;
+            cout <<" --------------------------------------------------------- : " << endl;;
             
             encontrado = true;
         }

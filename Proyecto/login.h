@@ -1,1 +1,6 @@
-bool login ();
+
+class login {
+
+    public : bool logIn ();
+
+} ;

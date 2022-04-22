@@ -1,1 +1,6 @@
-void  menu();
+class Menu {
+
+    public : void  menu();
+
+};
+

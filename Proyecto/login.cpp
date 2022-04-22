@@ -1,8 +1,9 @@
 #include <iostream>
+#include "login.h"
 
 using namespace	 std;
 
-bool login (){
+bool login :: logIn (){
 
 
     int contra ;

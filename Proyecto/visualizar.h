@@ -1,3 +1,10 @@
+#include <iostream>
 #include <fstream>
 
-void verRecluso(ifstream & Leer);
+class visualizar {
+
+    public :  
+    void verRecluso();
+
+} ;
+

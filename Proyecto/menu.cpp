@@ -5,12 +5,15 @@
 #include "ingresar.h"
 #include "visualizar.h"
 #include "buscar.h"
+#include "menu.h"
+#include "modificar.h"
+#include "eliminar.h"
 
 
 
 using namespace std;
 
-void  menu (){
+void Menu:: menu (){
 
     bool salir = false;
 
@@ -30,7 +33,12 @@ void  menu (){
         cin >> opcion;
 
         ofstream ingreso ;
-        ifstream leer;
+        visualizar ver ;
+        buscar bsc ;
+        modificar mod;
+        eliminar eli;
+
+
 
         switch (opcion)
         {
@@ -39,14 +47,16 @@ void  menu (){
            ingresarreclusos ();
             break;
         case 2: 
-           verRecluso(leer);
+           ver.verRecluso();
             break;
         case 3: 
-           //buscarRecluso();
+           bsc.buscarRecluso();
             break;
         case 4: 
+            mod.ModificarRecluso();
            ;
         case 5: {
+            eli.EliminarRecluso();
             
         }
           
