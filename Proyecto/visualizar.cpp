@@ -7,12 +7,12 @@
 
 using namespace std;
 
-void  visualizar:: verRecluso(){//parametro y recibimiento por referencia 
+void  visualizar:: verRecluso(){
     
     
     system ("cls");
 
-    string codigo, edad, ced;
+    string codigo, edad, ced, celda ;
     string  nombre, ape, tiempo;
 
     ifstream Leer ;
@@ -27,6 +27,7 @@ void  visualizar:: verRecluso(){//parametro y recibimiento por referencia
 
         while (!Leer.eof())
         {
+            Leer >> celda;
             Leer >> nombre;
             Leer >> ape;
             Leer >> ced;
@@ -34,11 +35,12 @@ void  visualizar:: verRecluso(){//parametro y recibimiento por referencia
             Leer >> tiempo;
 
             cout <<" Codigo --------------------- : " << codigo << endl;
+            cout <<" Numero de celda ------------ : " << celda << endl;
             cout <<" Primer Nombre -------------- : " << nombre << endl;
             cout <<" Primer Apellido  ----------- : " << ape << endl;
             cout <<" Numero de cedula  -----------: " << ced << endl;
             cout <<" Edad ---------.............. : " << edad << endl;
-            cout <<" Tiempo de sentencia ---------: " << tiempo << endl;
+            cout <<" Años de sentencia -----------: " << tiempo << endl;
             cout <<" --------------------------------------------------------- : " << endl;
 
 

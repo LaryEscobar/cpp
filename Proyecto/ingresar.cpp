@@ -10,14 +10,14 @@ bool verifica (string Cod ){
 
     ifstream leer ("Ingreso_Recluso. txt", ios :: in );
 
-    string codigo, edad, ced;
+    string codigo, edad, ced, celda;
     string  nombre, ape, tiempo ;
 
     leer >> codigo;
 
     while (!leer.eof())
     {
-            leer >> ced ;
+            leer >> celda;
             leer >> nombre ;
             leer >> ape ;
             leer >> ced ;
@@ -40,8 +40,8 @@ bool verifica (string Cod ){
 
 void ingresarreclusos (){
 
-    string codigo, edad, ced;
-    string  nombre, ape, tiempo, a ;
+    string codigo, edad, ced, celda ;
+    string  nombre, ape, tiempo;
     char op ;
 
     ofstream agg;
@@ -61,6 +61,10 @@ void ingresarreclusos (){
         cout << " Codigo del Recluso: " << endl ;
         cin.ignore();
         cin >> codigo;
+
+        cout << " Numero de celda: " << endl ;
+        cin.ignore();
+        cin >> celda;
         
         cout << " Ingrese Primer Nombre del Recluso : " << endl ;
         cin.ignore();
@@ -79,13 +83,13 @@ void ingresarreclusos (){
         cin.ignore();
         cin >> edad;
   
-        cout << " Ingrese Tiempo de Sentencia en numeros: " << endl ;
+        cout << " Ingrese años de Sentencia en numeros: " << endl ;
         cin.ignore();
         cin >> tiempo;
 
          if (verifica (codigo))
 
-        agg << codigo << " " << nombre << " " << ape << " " << ced <<" " << edad << " " << tiempo  <<"\n " ;
+        agg << codigo << " "  << celda << " " << nombre << " " << ape << " " << ced <<" " << edad << " " << tiempo  <<"\n " ;
 
 
         cout << " Desea seguir ingresando reclusos? s/n " << endl;

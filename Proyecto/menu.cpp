@@ -22,7 +22,7 @@ void Menu:: menu (){
 
         int opcion = 0;
 
-         cout << " Menu Principal " << endl ;
+         cout << "    Menu Principal " << endl ;
         cout << " 1. Ingresar Recluso " << endl ;
         cout << " 2. Visualizar Recluso " << endl ;
         cout << " 3. Buscar Recluso  " << endl ;

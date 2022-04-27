@@ -10,10 +10,10 @@ void modificar ::  ModificarRecluso(){
 
         system ("cls");
 
-        string codigo, edad, ced;
+        string codigo, edad, ced, celda;
         string  nombre, ape, tiempo;
         string codmod;
-        string nombremod, apemod ;
+        string nombremod, apemod, celdamod ;
         string edadmod, tiempomod;
         string cedmod ;
 
@@ -22,6 +22,7 @@ void modificar ::  ModificarRecluso(){
         leer.open ("Ingreso_Recluso. txt", ios :: in);
 
         ofstream mod ("modificar_Recluso.txt", ios :: out );
+
         if (leer.is_open())
         {
             cout << " Ingrese el codigo del recluso a modificar " << endl;
@@ -30,6 +31,7 @@ void modificar ::  ModificarRecluso(){
 
             while (!leer.eof()) 
             {
+            leer >> celda;
             leer >> nombre;
             leer >> ape;
             leer >> ced;
@@ -41,30 +43,34 @@ void modificar ::  ModificarRecluso(){
                     cout <<" Modifique los datos " << endl;
                     cout <<" ------------------- " << endl;
 
-                    cout << " Ingrese Primer Nombre del Recluso : " << endl ;
+                    cout << " Ingrese Numero de Celda: " << endl ;
+                    cin.ignore();
+                    cin >> celdamod;
+
+                    cout << " Ingrese Primer Nombre del Recluso: " << endl ;
                     cin.ignore();
                     cin >> nombremod;
 
-                    cout << " Ingrese  Primer Apellido del Recluso : " << endl ;
+                    cout << " Ingrese  Primer Apellido del Recluso: " << endl ;
                     cin.ignore();
                     cin >> apemod;
                     
 
-                    cout << " Ingrese Numero de cedula " << endl;
+                    cout << " Ingrese Numero de cedula: " << endl;
                     cin.ignore();
                     cin>>cedmod;
                     
-                    cout << " Ingrese Edad : " << endl ;
+                    cout << " Ingrese Edad: " << endl ;
                     cin.ignore();
                     cin >> edadmod;
             
-                    cout << " Ingrese Tiempo de Sentencia en numeros: " << endl ;
+                    cout << " Ingrese Años de Sentencia en numeros: " << endl ;
                     cin.ignore();
                     cin >> tiempomod;
 
-                    mod << codigo <<" " << nombremod << " " << apemod <<" " << cedmod << " " << edadmod << " " << tiempomod <<"\n " ;
+                    mod << codigo <<" " << celdamod << " " << nombremod << " " << apemod <<" " << cedmod << " " << edadmod << " " << tiempomod <<"\n " ;
                 }else {
-                    mod << codigo <<" " << nombre <<" " << ape <<" " << ced <<" " << edad << " " << tiempo <<"\n " ;
+                    mod << codigo <<" " << celda << " " << nombre <<" " << ape <<" " << ced <<" " << edad << " " << tiempo <<"\n " ;
                 }
                 
                 leer >> codigo ;

@@ -11,38 +11,38 @@ void eliminar :: EliminarRecluso(){
  system ("cls");
 
         string codigo, edad, ced;
-        string  nombre, ape, tiempo, a;
-        string codmod;
-        string nombremod, apemod ;
-        string edadmod, tiempomod, amod ;
-        string cedmod ;
+        string  nombre, ape, tiempo, celda ;
+        string code;
+      
 
         ifstream leer ;
 
         leer.open ("Ingreso_Recluso. txt", ios :: in);
 
         ofstream mod ("modificar_Recluso.txt", ios :: out );
+
         if (leer.is_open())
         {
             cout << " Ingrese el codigo del recluso a eliminar" << endl;
-            cin >> codmod;
+            cin >> code;
             leer >> codigo ;
 
             while (!leer.eof()) 
             {
+            leer >> celda;
             leer >> nombre;
             leer >> ape;
             leer >> ced;
             leer >> edad;
             leer >> tiempo;
-            leer >> a;
+         
 
-                if (codigo == codmod)
+                if (codigo == code)
                 {
                    cout <<" Recluso Eliminado del Sistema " << endl;
                    Sleep (1500);
                 }else {
-                    mod << codigo <<" " << nombre <<" " << ape <<" " << ced <<" " << edad << " " << tiempo << " " << a<<"\n " ;
+                    mod << codigo <<" " << celda << " " << nombre <<" " << ape <<" " << ced <<" " << edad << " " << tiempo << " " <<"\n " ;
                 }
                 
                 leer >> codigo ;
@@ -56,4 +56,5 @@ void eliminar :: EliminarRecluso(){
         }
         remove("Ingreso_Recluso. txt");
         rename("modificar_Recluso.txt", "Ingreso_Recluso. txt");
+        system ("pause");
 }

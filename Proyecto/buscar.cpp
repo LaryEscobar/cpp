@@ -10,14 +10,14 @@ using namespace std;
 
 
 
-void buscar :: buscarRecluso(){ //parametro y recibimiento por referencia 
+void buscar :: buscarRecluso(){ 
     system ("cls");
 
     ifstream leer;
 
     leer.open ("Ingreso_Recluso. txt", ios :: in);
 
-    string codigo, edad, ced;
+    string codigo, edad, ced, celda;
     string  nombre, ape, tiempo;
     string cod2 ;
 
@@ -30,6 +30,7 @@ void buscar :: buscarRecluso(){ //parametro y recibimiento por referencia
 
     while (!leer.eof() && !encontrado)
     {
+            leer >> celda;
             leer >> nombre;
             leer >> ape;
             leer >> ced;
@@ -40,11 +41,12 @@ void buscar :: buscarRecluso(){ //parametro y recibimiento por referencia
         {
             
             cout <<" Codigo --------------------- : " << codigo << endl;
+            cout <<" Numero de Celda ------------ : " << celda << endl;
             cout <<" Primer Nombre -------------- : " << nombre << endl;
             cout <<" Primer Apellido  ----------- : " << ape << endl;
             cout <<" Numero de cedula  -----------: " << ced << endl;
             cout <<" Edad ---------.............. : " << edad << endl;
-            cout <<" Tiempo de sentencia ---------: " << tiempo << endl;
+            cout <<" Años de sentencia -----------: " << tiempo << endl;
             cout <<" --------------------------------------------------------- : " << endl;;
             
             encontrado = true;
